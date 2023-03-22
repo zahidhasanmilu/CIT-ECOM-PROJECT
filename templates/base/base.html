@@ -144,8 +144,8 @@
                                                     <a href="#" title="User">User</a>
                                                     <div class="dropdown-menu level2">
                                                         <ul>
-                                                            <li><a href="user-login.html" title="Login">Login</a></li>
-                                                            <li><a href="user-register.html"
+                                                            <li><a href="{% url 'login' %}" title="Login">Login</a></li>
+                                                            <li><a href="{% url 'register' %}"
                                                                     title="Register">Register</a>
                                                             </li>
                                                             <li><a href="#" title="My Account">My Account</a></li>
@@ -304,11 +304,11 @@
                                             Account</a>
                                     </div>
                                     <div class="item">
-                                        <a href="user-login.html" title="Log in to your customer account"><i
+                                        <a href="{% url 'login' %}" title="Log in to your customer account"><i
                                                 class="fa fa-sign-in"></i>Login</a>
                                     </div>
                                     <div class="item">
-                                        <a href="user-register.html" title="Register Account"><i
+                                        <a href="{% url 'register' %}" title="Register Account"><i
                                                 class="fa fa-user"></i>Register</a>
                                     </div>
                                     <div class="item">
@@ -318,11 +318,13 @@
                                         <!-- Language -->
                                         <div class="language switcher">
                                             <a href="#" title="Language English" class="active"><img
-                                                    src="{% static  'img/language-en.jpg' %}" alt="Language English"></a>
+                                                    src="{% static  'img/language-en.jpg' %}"
+                                                    alt="Language English"></a>
                                             <a href="#" title="Language French"><img
                                                     src="{% static  'img/language-fr.jpg' %}" alt="Language French"></a>
                                             <a href="#" title="Language Deutsch"><img
-                                                    src="{% static  'img/language-de.jpg' %}" alt="Language Deutsch"></a>
+                                                    src="{% static  'img/language-de.jpg' %}"
+                                                    alt="Language Deutsch"></a>
                                         </div>
 
                                         <!-- Currency -->
@@ -349,7 +351,8 @@
         <!-- Footer -->
         <footer id="footer">
             <div class="footer">
-                <div class="container">
+                <!-- <div> <div class="container"> -->
+                <div>
                     <div class="footer-wrap">
                         <div class="row">
                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-col">
@@ -362,7 +365,8 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisc ing elit, sed do eiusmod
                                             tempor
                                             incididunt ut labore et dolore magna aliqua.</p>
-                                        <p>Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut
+                                        <p>Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi
+                                            ut
                                             aliquip.</p>
                                     </div>
                                 </div>
@@ -388,7 +392,8 @@
                                     <h2 class="block-title">Opening Hours</h2>
 
                                     <div class="block-content">
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                            dolore
                                             eu
                                             fugiat nulla pariatur. </p>
                                         <p>
@@ -406,7 +411,8 @@
 
                                     <div class="block-content">
                                         <div class="contact">
-                                            <p><strong>Address</strong> : 123 Suspendis matti, VST District, NY Accums,
+                                            <p><strong>Address</strong> : 123 Suspendis matti, VST District, NY
+                                                Accums,
                                                 North American</p>
                                             <p><strong>Hotline</strong> : 012345678910 - 098765432100</p>
                                             <p><strong>Email</strong> : <a
@@ -426,7 +432,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-                            <div class="copyright"><a target="_blank" href="https://www.templateshub.net">Templates
+                            <div class="copyright"><a target="_blank" href="https://www.facebook.com/zahidhasanmilu/">Templates
                                     Hub</a>
                             </div>
                         </div>
@@ -449,7 +455,7 @@
             </a>
         </div>
 
-  
+
     </div>
 
     {% include 'base/js.html'%}
