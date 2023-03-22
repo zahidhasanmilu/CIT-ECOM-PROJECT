@@ -36,7 +36,7 @@
                             <div id="main-menu">
                                 <ul class="menu">
                                     <li class="dropdown">
-                                        <a href="index.html" title="Homepage">Home</a>
+                                        <a href="{% url 'home' %}" title="Homepage">Home</a>
                                         <div class="dropdown-menu">
                                             <ul>
                                                 <li><a href="index.html" title="Homepage 1">Homepage 1</a></li>
@@ -181,11 +181,11 @@
                                     </li>
 
                                     <li>
-                                        <a href="page-about-us.html">About Us</a>
+                                        <a href="{% url 'aboutus' %}">About Us</a>
                                     </li>
 
                                     <li>
-                                        <a href="page-contact.html">Contact</a>
+                                        <a href="{% url 'contactus' %}">Contact</a>
                                     </li>
                                 </ul>
                             </div>
@@ -195,7 +195,7 @@
                         <div class="col-lg-2 col-md-2 col-sm-12 header-center justify-content-center">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="home-4.html">
+                                <a href="{% url 'home' %}">
                                     <img class="img-responsive" src="{% static 'img/logo.png' %}" alt="Logo">
                                 </a>
                             </div>
@@ -208,13 +208,9 @@
                         <div
                             class="col-lg-5 col-md-5 col-sm-12 header-right d-flex justify-content-end align-items-center">
                             <!-- Search -->
-                            <div class="form-search">
-                                <form action="#" method="get">
-                                    <input type="text" class="form-input" placeholder="Search">
-                                    <button type="submit" class="fa fa-search"></button>
-                                </form>
-                            </div>
-
+                            {% block search %}
+                            
+                            {% endblock search %}
                             <!-- Cart -->
                             <div class="block-cart dropdown">
                                 <div class="cart-title">
@@ -347,6 +343,9 @@
         {% block body %}
 
         {% endblock body %}
+<br>
+<br>
+<br>
 
         <!-- Footer -->
         <footer id="footer">

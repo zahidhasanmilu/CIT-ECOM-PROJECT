@@ -30,3 +30,16 @@ class LoginView(View):
 
 def signup(request):
     return render(request, 'Account/user-register.html')
+
+
+class AboutView(View):
+    template_name = 'Account/page-about-us.html'
+
+    def get(self,request):
+        return render(request, self.template_name )
+
+class ContactUsView(View):
+    template_name = 'Account/page-contact.html'
+
+    def get(self,request):
+        return render(request, self.template_name )
