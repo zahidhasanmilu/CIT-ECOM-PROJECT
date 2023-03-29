@@ -29,6 +29,7 @@ SECRET_KEY = 'django-insecure-usz*j^l#myc=tctmcw#@sxue4%8&!41b+rxq+iw(&a##ocprln
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# username_field = 'email'
 
 
 # Application definition

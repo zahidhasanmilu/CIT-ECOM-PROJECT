@@ -21,26 +21,39 @@ class HomeView(View):
 
 
 def signin(request):
-    if request.
+    print('Zahid')
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        print(username, password)
+        user = authenticate(username = username, password=password)
+        print(user, 'Hello')
+        if user:
+            login(request, user)
+            print("User logged in succecfully")
+            return redirect('home')
+        else:
+            messages.info(request, "User Doesn't Exists")
+            return redirect('login')
     return render(request, 'Account/user-login.html')
 
 
 
 def signup(request):
     if request.method == 'POST':
-        name = request.POST['name']
+        username = request.POST['username']
         email = request.POST['email']
         password = request.POST['password']
         password1 = request.POST['password1']
         if password==password1:
-            if User.objects.filter(username=name).exists():
+            if User.objects.filter(username=username).exists():
                 messages.info(request, 'User Already Exists')
                 return redirect('register')
             elif User.objects.filter(email=email).exists():
                 messages.info(request, "Email Already Exists")
                 return redirect('register')
             else:
-                obj = User.objects.create_user(username=name, email=email, password=password)
+                obj = User.objects.create_user(username=username, email=email, password=password)
                 obj.set_password(password)
                 obj.save()
                 messages.success(request, 'User Create Succefully')

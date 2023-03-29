@@ -21,11 +21,11 @@
 					<h2 class="title"><span>Login</span></h2>
 				</div>
 
-				<form method="post" enctype="multipart/form-data">
+				<form method="POST" action="" enctype="multipart/form-data">
 					{% csrf_token %}
 					<div class="form-group">
-						<label>Email</label>
-						<input type="email" value="" name="email">
+						<label>Username</label>
+						<input type="text" value="" name="username">
 					</div>
 
 					<div class="form-group">
