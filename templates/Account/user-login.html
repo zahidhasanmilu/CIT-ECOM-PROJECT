@@ -10,16 +10,25 @@
 <!-- Main Content -->
 <div id="content" class="site-content">
 	<!-- Breadcrumb -->
-<br>
-<br>
-<br>
-<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	<div class="container">
 		<div class="login-page">
 			<div class="login-form form">
 				<div class="block-title">
 					<h2 class="title"><span>Login</span></h2>
 				</div>
+				{% if messages %}
+				<ul class="messages">
+					{% for message in messages %}
+					<div class="alert alert-danger" role="alert">
+						{{ forloop.counter }} {{ message }}
+					</div>
+					{% endfor %}
+				</ul>
+				{% endif %}
 
 				<form method="POST" action="" enctype="multipart/form-data">
 					{% csrf_token %}
