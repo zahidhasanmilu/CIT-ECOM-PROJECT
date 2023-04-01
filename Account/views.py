@@ -3,6 +3,7 @@ from django.views.generic import View
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash
 
 
 # Create your views here.
@@ -37,6 +38,29 @@ class signin(View):
         else:
             messages.info(request, "User Doesn't Exists")
             return redirect('login')
+
+def forgotpassword(request):
+    if request.method=='POST':
+        usernames = request.POST["username"]
+        email = request.POST["email"]
+        new_password = request.POST["new_password"]
+
+        user = User.objects.get(username=usernames)
+        if user :            
+            if user.email == email:
+                user.set_password(new_password)
+                user.save()
+                update_session_auth_hash(request, user)
+                messages.info(request, "Password Update succecfully")
+                return redirect('login')
+            else:
+                messages.info(request, "Email Not Matched")
+                return redirect('forgotPassword')
+        else:
+            messages.info(request, "User Not Found")
+            return redirect('forgotPassword')
+
+    return render(request, 'Account/forgotpassword.html')
 
 # def signin(request):
 #     print('Zahid')
