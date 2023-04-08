@@ -9,7 +9,6 @@ from django.contrib.auth import update_session_auth_hash
 # Create your views here.
 class HomeView(View):
     template_name = 'Account/index.html'
-    template_name2 = 'Account/index.html'
 
     def get(self, request):
 

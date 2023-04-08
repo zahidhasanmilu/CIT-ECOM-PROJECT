@@ -23,20 +23,114 @@
 
 </head>
 
-<body class="home home-4">
+<body class="home home-2">
     <div id="all">
         <!-- Header -->
         <header id="header">
-            <div class="container">
-                <div class="header-top">
-                    <div class="row align-items-center">
-                        <!-- Header Left -->
-                        <div class="col-lg-5 col-md-5 col-sm-12">
+            <!-- Topbar -->
+            <div class="topbar">
+                <div class="container topbar-content">
+                    <div class="row">
+                        <!-- Topbar Left -->
+                        <div class="col-md-7 col-sm-7 col-xs-12">
+                            <div class="topbar-left d-flex">
+                                <div class="email">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>Email: tivatheme@gmail.com
+                                </div>
+                                <div class="skype">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>Skype: tivatheme
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Topbar Right -->
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+                            <div class="topbar-right d-flex justify-content-end">
+                                <!-- My Account -->
+                                <div class="dropdown account">
+                                    <div class="dropdown-toggle" data-toggle="dropdown">
+                                        My Account
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="item">
+                                            <a href="#" title="Log in to your customer account"><i
+                                                    class="fa fa-cog"></i>My Account</a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="user-login.html" title="Log in to your customer account"><i
+                                                    class="fa fa-sign-in"></i>Login</a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="user-register.html" title="Register Account"><i
+                                                    class="fa fa-user"></i>Register</a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="#" title="My Wishlists"><i class="fa fa-heart"></i>My Wishlists</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Language -->
+                                <div class="dropdown language">
+                                    <div class="dropdown-toggle" data-toggle="dropdown">
+                                        <img src="img/language-en.jpg" alt="Language English">
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="item">
+                                            <a href="#" title="Language English"><img src="img/language-en.jpg"
+                                                    alt="Language English"> English</a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="#" title="Language French"><img src="img/language-fr.jpg"
+                                                    alt="Language French"> French</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Currency -->
+                                <div class="dropdown currency">
+                                    <div class="dropdown-toggle" data-toggle="dropdown">
+                                        USD
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="item">
+                                            <a href="#" title="USD">USD</a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="#" title="EUR">EUR</a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="#" title="GBP">GBP</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Top -->
+            <div class="header-top">
+                <div class="container">
+                    <div class="row margin-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 padding-0">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="home-2.html">
+                                    <img class="img-responsive" src="img/logo.png" alt="Logo">
+                                </a>
+                            </div>
+
+                            <span id="toggle-mobile-menu"><i class="zmdi zmdi-menu"></i></span>
+                        </div>
+
+                        <div class="col-lg-7 col-md-7 col-sm-12 padding-0">
                             <!-- Main Menu -->
                             <div id="main-menu">
                                 <ul class="menu">
                                     <li class="dropdown">
-                                        <a href="{% url 'home' %}" title="Homepage">Home</a>
+                                        <a href="home-2.html" title="Homepage">Home</a>
                                         <div class="dropdown-menu">
                                             <ul>
                                                 <li><a href="index.html" title="Homepage 1">Homepage 1</a></li>
@@ -53,32 +147,31 @@
                                         <div class="dropdown-menu">
                                             <ul>
                                                 <li class="has-image">
-                                                    <img src="{% static 'img/product/product-category-1.png' %}"
+                                                    <img src="img/product/product-category-1.png"
                                                         alt="Product Category Image">
                                                     <a href="product-grid-left-sidebar.html"
                                                         title="Vegetables">Vegetables</a>
                                                 </li>
                                                 <li class="has-image">
-                                                    <img src="{% static 'img/product/product-category-2.png' %}"
+                                                    <img src="img/product/product-category-2.png"
                                                         alt="Product Category Image">
                                                     <a href="product-grid-left-sidebar.html" title="Fruits">Fruits</a>
                                                 </li>
                                                 <li class="has-image">
-                                                    <img src="{% static 'img/product/product-category-3.png' %}"
+                                                    <img src="img/product/product-category-3.png"
                                                         alt="Product Category Image">
                                                     <a href="product-grid-left-sidebar.html" title="Bread">Bread</a>
                                                 </li>
                                                 <li class="has-image">
-                                                    <img src="{% static 'img/product/product-category-4.png' %}"
+                                                    <img src="img/product/product-category-4.png"
                                                         alt="Product Category Image">
                                                     <a href="product-grid-left-sidebar.html" title="Juices">Juices</a>
                                                 </li>
                                                 <li class="has-image">
-                                                    <img src="{% static 'img/product/product-category-5.png' %}"
+                                                    <img src="img/product/product-category-5.png"
                                                         alt="Product Category Image">
                                                     <a href="product-grid-left-sidebar.html" title="Tea and coffee">Tea
-                                                        and
-                                                        coffee</a>
+                                                        and coffee</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -90,47 +183,38 @@
                                             <ul>
                                                 <li class="dropdown-submenu">
                                                     <a href="product-grid-left-sidebar.html"
-                                                        title="Product List">Product
-                                                        List</a>
+                                                        title="Product List">Product List</a>
                                                     <div class="dropdown-menu level2">
                                                         <ul>
                                                             <li><a href="product-grid-left-sidebar.html"
                                                                     title="Product Grid - Left Sidebar">Product Grid -
-                                                                    Left
-                                                                    Sidebar</a></li>
+                                                                    Left Sidebar</a></li>
                                                             <li><a href="product-grid-right-sidebar.html"
                                                                     title="Product Grid - Right Sidebar">Product Grid -
-                                                                    Right
-                                                                    Sidebar</a></li>
+                                                                    Right Sidebar</a></li>
                                                             <li><a href="product-grid-full-width.html"
                                                                     title="Product Grid - Full Width">Product Grid -
-                                                                    Full
-                                                                    Width</a></li>
+                                                                    Full Width</a></li>
                                                             <li><a href="product-list-left-sidebar.html"
                                                                     title="Product List - Left Sidebar">Product List -
-                                                                    Left
-                                                                    Sidebar</a></li>
+                                                                    Left Sidebar</a></li>
                                                         </ul>
                                                     </div>
                                                 </li>
                                                 <li class="dropdown-submenu">
                                                     <a href="product-detail-left-sidebar.html"
-                                                        title="Product List">Product
-                                                        Detail</a>
+                                                        title="Product List">Product Detail</a>
                                                     <div class="dropdown-menu level2">
                                                         <ul>
                                                             <li><a href="product-detail-left-sidebar.html"
                                                                     title="Product Detail - Left Sidebar">Product Detail
-                                                                    -
-                                                                    Left Sidebar</a></li>
+                                                                    - Left Sidebar</a></li>
                                                             <li><a href="product-detail-full-width-1.html"
                                                                     title="Product List - Full Width 1">Product Detail -
-                                                                    Full
-                                                                    Width 1</a></li>
+                                                                    Full Width 1</a></li>
                                                             <li><a href="product-detail-full-width-2.html"
                                                                     title="Product List - Full Width 2">Product Detail -
-                                                                    Full
-                                                                    Width 2</a></li>
+                                                                    Full Width 2</a></li>
                                                         </ul>
                                                     </div>
                                                 </li>
@@ -144,13 +228,11 @@
                                                     <a href="#" title="User">User</a>
                                                     <div class="dropdown-menu level2">
                                                         <ul>
-                                                            <li><a href="{% url 'login' %}" title="Login">Login</a></li>
-                                                            <li><a href="{% url 'register' %}"
-                                                                    title="Register">Register</a>
-                                                            </li>
+                                                            <li><a href="user-login.html" title="Login">Login</a></li>
+                                                            <li><a href="user-register.html"
+                                                                    title="Register">Register</a></li>
                                                             <li><a href="#" title="My Account">My Account</a></li>
                                                             <li><a href="#" title="My Wishlists">My Wishlists</a></li>
-
                                                         </ul>
                                                     </div>
                                                 </li>
@@ -167,55 +249,33 @@
                                             <ul class="has-sub">
                                                 <li><a href="blog-list-left-sidebar-1.html"
                                                         title="Blog List - Left Sidebar 1">Blog List - Left Sidebar
-                                                        1</a>
-                                                </li>
+                                                        1</a></li>
                                                 <li><a href="blog-list-left-sidebar-2.html"
                                                         title="Blog List - Left Sidebar 2">Blog List - Left Sidebar
-                                                        2</a>
-                                                </li>
+                                                        2</a></li>
                                                 <li><a href="blog-grid-full-width.html"
-                                                        title="Blog Grid - Full Width">Blog
-                                                        Grid - Full Width</a></li>
+                                                        title="Blog Grid - Full Width">Blog Grid - Full Width</a></li>
                                                 <li><a href="blog-detail.html" title="Blog Detail">Blog Detail</a></li>
                                             </ul>
                                         </div>
                                     </li>
 
                                     <li>
-                                        <a href="{% url 'aboutus' %}">About Us</a>
+                                        <a href="page-about-us.html">About Us</a>
                                     </li>
 
                                     <li>
-                                        <a href="{% url 'contactus' %}">Contact</a>
+                                        <a href="page-contact.html">Contact</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
-                        <!-- Header Center -->
-                        <div class="col-lg-2 col-md-2 col-sm-12 header-center justify-content-center">
-                            <!-- Logo -->
-                            <div class="logo">
-                                <a href="{% url 'home' %}">
-                                    <img class="img-responsive" src="{% static 'img/logo.png' %}" alt="Logo">
-                                </a>
-                            </div>
-
-                            <span id="toggle-mobile-menu"><i class="zmdi zmdi-menu"></i></span>
-                        </div>
-
-
-                        <!-- Header Right -->
-                        <div
-                            class="col-lg-5 col-md-5 col-sm-12 header-right d-flex justify-content-end align-items-center">
-                            <!-- Search -->
-                            {% block search %}
-
-                            {% endblock search %}
+                        <div class="col-lg-3 col-md-3 col-sm-12 padding-0">
                             <!-- Cart -->
                             <div class="block-cart dropdown">
                                 <div class="cart-title">
-                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                    <i class="fa fa-shopping-basket"></i>
                                     <span class="cart-count">2</span>
                                 </div>
 
@@ -226,14 +286,13 @@
                                                 <tr>
                                                     <td class="product-image">
                                                         <a href="product-detail-left-sidebar.html">
-                                                            <img src="{% static  'img/product/7.jpg' %}" alt="Product">
+                                                            <img src="img/product/7.jpg" alt="Product">
                                                         </a>
                                                     </td>
                                                     <td>
                                                         <div class="product-name">
                                                             <a href="product-detail-left-sidebar.html">Organic
-                                                                Strawberry
-                                                                Fruits</a>
+                                                                Strawberry Fruits</a>
                                                         </div>
                                                         <div>
                                                             2 x <span class="product-price">$28.98</span>
@@ -249,7 +308,7 @@
                                                 <tr>
                                                     <td class="product-image">
                                                         <a href="product-detail-left-sidebar.html">
-                                                            <img src="{% static  'img/product/6.jpg' %}" alt="Product">
+                                                            <img src="img/product/6.jpg" alt="Product">
                                                         </a>
                                                     </td>
                                                     <td>
@@ -289,57 +348,12 @@
                                 </div>
                             </div>
 
-
-                            <!-- My Account -->
-                            <div class="my-account dropdown toggle-icon">
-                                <div class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="zmdi zmdi-menu"></i>
-                                </div>
-                                <div class="dropdown-menu">
-
-                                    <div class="item">
-                                        <a href="#" title="Log in to your customer account"><i class="fa fa-cog"></i>My
-                                            Account</a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="{% url 'login' %}" title="Log in to your customer account"><i
-                                                class="fa fa-sign-in"></i>Login</a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="{% url 'register' %}" title="Register Account"><i
-                                                class="fa fa-user"></i>Register</a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="#" title="My Wishlists"><i class="fa fa-heart"></i>My Wishlists</a>
-                                    </div>
-                                    {% if request.user.is_authenticated %}
-                                    <div class="item">
-                                        <a href="{% url 'logout' %}" title="logout"><i
-                                                class="fa fa-heart"></i>Logout</a>
-                                    </div>
-                                    {% endif %}
-
-                                    <div class="item">
-                                        <!-- Language -->
-                                        <div class="language switcher">
-                                            <a href="#" title="Language English" class="active"><img
-                                                    src="{% static  'img/language-en.jpg' %}"
-                                                    alt="Language English"></a>
-                                            <a href="#" title="Language French"><img
-                                                    src="{% static  'img/language-fr.jpg' %}" alt="Language French"></a>
-                                            <a href="#" title="Language Deutsch"><img
-                                                    src="{% static  'img/language-de.jpg' %}"
-                                                    alt="Language Deutsch"></a>
-                                        </div>
-
-                                        <!-- Currency -->
-                                        <div class="currency switcher">
-                                            <a href="#" title="USD" class="active">USD</a>
-                                            <a href="#" title="EUR">EUR</a>
-                                            <a href="#" title="GBP">GBP</a>
-                                        </div>
-                                    </div>
-                                </div>
+                            <!-- Search -->
+                            <div class="form-search">
+                                <form action="#" method="get">
+                                    <input type="text" class="form-input" placeholder="Search">
+                                    <button type="submit" class="fa fa-search"></button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -359,73 +373,101 @@
         <!-- Footer -->
         <footer id="footer">
             <div class="footer">
-                <!-- <div> <div class="container"> -->
-                <div>
-                    <div class="footer-wrap">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-col">
-                                <div class="block text">
-                                    <div class="block-content">
-                                        <a href="home-4.html" class="logo-footer">
-                                            <img src="{% static 'img/logo-3.png' %}" alt="Logo">
-                                        </a>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-col">
+                            <div class="block text">
+                                <div class="block-content">
+                                    <a href="home-2.html" class="logo-footer">
+                                        <img src="img/logo-2.png" alt="Logo">
+                                    </a>
 
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisc ing elit, sed do eiusmod
-                                            tempor
-                                            incididunt ut labore et dolore magna aliqua.</p>
-                                        <p>Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi
-                                            ut
-                                            aliquip.</p>
-                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisc ing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.<br>
+                                        Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut
+                                        aliquip.
+                                    </p>
                                 </div>
                             </div>
 
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-col">
-                                <div class="block newsletter">
-                                    <h2 class="block-title">Newsletter</h2>
-
-                                    <div class="block-content">
-                                        <p class="description">Sign up for newsletter to receive special offers and
-                                            exclusive news about FreshMart products</p>
-                                        <form action="#" method="post">
-                                            <input type="text" placeholder="Enter Your Email">
-                                            <button type="submit" class="btn btn-primary">Subscribe</button>
-                                        </form>
-                                    </div>
+                            <div class="block social">
+                                <div class="block-content">
+                                    <ul>
+                                        <li><a href="#"><i class="zmdi zmdi-facebook"></i></a></li>
+                                        <li><a href="#"><i class="zmdi zmdi-twitter"></i></a></li>
+                                        <li><a href="#"><i class="zmdi zmdi-dribbble"></i></a></li>
+                                        <li><a href="#"><i class="zmdi zmdi-instagram"></i></a></li>
+                                    </ul>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-col">
-                                <div class="block text">
-                                    <h2 class="block-title">Opening Hours</h2>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-col">
+                            <div class="block menu">
+                                <h2 class="block-title">Information</h2>
 
-                                    <div class="block-content">
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                            dolore
-                                            eu
-                                            fugiat nulla pariatur. </p>
-                                        <p>
-                                            <strong>Monday To Friday</strong> : 8.00 AM - 8.00 PM<br>
-                                            <strong>Satuday</strong> : 7.30 AM - 9.30 PM<br>
-                                            <strong>Sunday</strong> : 7.00 AM - 10.00 PM
-                                        </p>
-                                    </div>
+                                <div class="block-content">
+                                    <ul>
+                                        <li><a href="#">Specials</a></li>
+                                        <li><a href="#">New products</a></li>
+                                        <li><a href="#">Best sellers</a></li>
+                                        <li><a href="#">Terms and conditions</a></li>
+                                        <li><a href="#">Our stores</a></li>
+                                        <li><a href="#">Contact us</a></li>
+                                    </ul>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-col">
-                                <div class="block text">
-                                    <h2 class="block-title">Contact Us</h2>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-col">
+                            <div class="block menu">
+                                <h2 class="block-title">Your Account</h2>
 
-                                    <div class="block-content">
-                                        <div class="contact">
-                                            <p><strong>Address</strong> : 123 Suspendis matti, VST District, NY
-                                                Accums,
-                                                North American</p>
-                                            <p><strong>Hotline</strong> : 012345678910 - 098765432100</p>
-                                            <p><strong>Email</strong> : <a
-                                                    href="mailto:support@domain.com">support@domain.com</a>
-                                            </p>
+                                <div class="block-content">
+                                    <ul>
+                                        <li><a href="#">My orders</a></li>
+                                        <li><a href="#">My merchandise returns</a></li>
+                                        <li><a href="#">My credit slips</a></li>
+                                        <li><a href="#">My addresses</a></li>
+                                        <li><a href="#">My personal info</a></li>
+                                        <li><a href="#">My vouchers</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-col">
+                            <div class="block text">
+                                <h2 class="block-title">Contact Us</h2>
+
+                                <div class="block-content">
+                                    <div class="contact">
+                                        <div class="item d-flex">
+                                            <div>
+                                                <i class="zmdi zmdi-home"></i>
+                                            </div>
+                                            <div>
+                                                <span>123 Suspendis matti, VST District, NY Accums, North
+                                                    American</span>
+                                            </div>
+                                        </div>
+                                        <div class="item d-flex">
+                                            <div>
+                                                <i class="zmdi zmdi-phone-in-talk"></i>
+                                            </div>
+                                            <div>
+                                                <span>0123-456-78910<br>0987-654-32100</span>
+                                            </div>
+                                        </div>
+                                        <div class="item d-flex">
+                                            <div>
+                                                <i class="zmdi zmdi-email"></i>
+                                            </div>
+                                            <div>
+                                                <span><a href="mailto:support@domain.com">support@domain.com</a><br><a
+                                                        href="mailto:contact@domain.com">contact@domain.com</a></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -436,26 +478,17 @@
             </div>
 
             <!-- Copyright -->
-            <div class="footer-copyright">
+            <div class="footer-copyright text-center">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-                            <div class="copyright"><a target="_blank"
-                                    href="https://www.facebook.com/zahidhasanmilu/">Templates
-                                    Hub</a>
-                            </div>
-                        </div>
+                    <div class="payment">
+                        <img src="img/payment.png" alt="Payment">
+                    </div>
 
-                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 align-right">
-                            <div class="payment">
-                                <img src="{% static 'img/payment.png' %}" alt="Payment">
-                            </div>
-                        </div>
+                    <div class="copyright"><a target="_blank" href="https://www.templateshub.net">Templates Hub</a>
                     </div>
                 </div>
             </div>
         </footer>
-
 
         <!-- Go Up button -->
         <div class="go-up">
